@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kiosk Order System</title>
+  <link rel="stylesheet" href="./kiosk.css">
+</head>
+
+<body>
+  <img src="./starbucks.png" alt="스타벅스">
+
+  <!-- 탭 메뉴 -->
+  <nav class="tab-menu">
+    <button class="tab active" data-tab="beverage">Beverage</button>
+    <button class="tab" data-tab="desert">Dessert</button>
+  </nav>
+
+  <!-- 탭 전환되는 메뉴 컨테이너 -->
+  <section id="menu-container">
+    <!-- 음료 섹션 -->
+    <section class="menu" id="menu-section">
+      <article data-name="라벤더 카페 브레베" data-price="7000">
+        <img src="./20220412083026158.png" alt="라벤더 카페 브레베">
+        <h3>라벤더 카페 브레베</h3>
+        <p>Lavender Cafe Breve</p>
+        <p>진한 리저브 에스프레소 샷과 은은한 라벤더향이 고급스럽게 어우러진 부드럽고 세련된 풍미의 음료</p>
+        <button data-name="Coffee" data-price="7000">Coffee (7,000원)</button>
+      </article>
+      <article data-name="스파클링 시트러스 에스프레소" data-price="7500">
+        <img src="./20210322093318028.jpg" alt="스파클링 시트러스 에스프레소">
+        <h3>스파클링 시트러스 에스프레소</h3>
+        <p>Sparkling Citrus Espresso</p>
+        <p>리저브 에스프레소에 상큼한 레몬과
+          진저에일을 더해 청량감과 시트러스 풍미를
+          가득 선사하는 커피 음료</p>
+        <button data-name="Tea" data-price="7500">Tea (7,500원)</button>
+      </article>
+    </section>
+
+    <!-- 디저트 섹션 -->
+    <section class="menu" id="desert-section" style="display: none;">
+      <article data-name="초콜릿 케이크" data-price="5500">
+        <img src="./20210325161742703.jpg" alt="초콜릿 케이크">
+        <h3>초콜릿 케이크</h3>
+        <p>Chocolate Cake</p>
+        <p>진한 초콜릿과 부드러운 크림이 어우러진 디저트</p>
+        <button data-name="Chocolate Cake" data-price="5500">Chocolate Cake (5,500원)</button>
+      </article>
+      <article data-name="티라미수" data-price="6000">
+        <img src="./tira.jpg" alt="티라미수">
+        <h3>티라미수</h3>
+        <p>Tiramisu</p>
+        <p>부드러운 크림과 커피 향이 어우러진 이탈리아 디저트</p>
+        <button data-name="Tiramisu" data-price="6000">Tiramisu (6,000원)</button>
+      </article>
+    </section>
+  </section>
+
+  <!-- 장바구니 섹션 (항상 하단에 고정) -->
+  <section class="cart">
+    <h2>Cart</h2>
+    <div id="cartItems">
+      <!-- 장바구니 아이템 -->
+    </div>
+    <h3 class="total">Total: <span id="totalAmount">0</span>원</h3>
+  </section>
+
+  <script src="kiosk.js"></script>
+</body>
+
+</html>
